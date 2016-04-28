@@ -1,0 +1,211 @@
+@keyframes fadeIn {
+  from {
+    opacity:0;
+  }
+
+  to {
+    opacity:1;
+  }
+}
+
+.hex-top {
+  font-family: Impact, Charcoal, sans-serif;
+  background: transparent;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.hex-top > p {
+  text-align: center;
+  position: relative;;
+  width: inherit;;
+  font-weight: 900;
+  font-size: 240px;
+  background: url('../images/bg.jpg');
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 6px #F5BB1C;
+}
+
+.hex-bottom {
+  height: 250px;
+}
+
+.hex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  animation:fadeIn ease-in 1;   /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  animation-fill-mode:forwards;   /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  animation-duration:1s;
+}
+
+.fadeOne {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+.fadeTwo {
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay:1.2s;
+  animation-delay: 1.2s;
+}
+
+.fadeThree {
+  -webkit-animation-delay: 1.6s;
+  -moz-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}
+
+.hex {
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+  margin: 1px;
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+      -ms-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+          transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+}
+
+.hex * {
+    position: absolute;
+    visibility: visible;
+    outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+}
+
+
+.hexIn {
+    display:block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    -webkit-transform: skewY(-30deg) rotate(60deg);
+        -ms-transform: skewY(-30deg) rotate(60deg);
+            transform: skewY(-30deg) rotate(60deg);
+}
+
+.hex img {
+    left: -100%;
+    right: -100%;
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.hex h1, .hex p {
+    width: 102%;
+    left:-1%; /* prevent line on the right where background doesn't cover image */
+    padding: 5%;
+    box-sizing:border-box;
+    background-color: rgba(245, 187, 0, 0.8);
+    font-weight: bolder;
+    -webkit-transition:  -webkit-transform .2s ease-out, opacity .3s ease-out;
+            transition:          transform .2s ease-out, opacity .3s ease-out;
+}
+.hex h1 {
+    margin: 0;
+    bottom: 50%;
+    padding-top:50%;
+    font-size: 1.5em;
+    z-index: 1;
+    -webkit-transform:translateY(-100%) translatez(-1px);
+        -ms-transform:translateY(-100%) translatez(-1px);
+            transform:translateY(-100%) translatez(-1px);
+}
+
+.hex h1:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    width: 10%;
+    text-align: center;
+    border-bottom: 3px solid #fff;
+}
+.hex p {
+    top: 50%;
+    padding-bottom:50%;
+    -webkit-transform:translateY(100%) translatez(-1px);
+        -ms-transform:translateY(100%) translatez(-1px);
+            transform:translateY(100%) translatez(-1px);
+}
+/*** HOVER EFFECT  **********************************************************************/
+.hexIn:hover h1, .hexIn:focus h1,
+.hexIn:hover p, .hexIn:focus p{
+  color: #fff;
+  transform:translateY(0%) translatez(-1px);
+}
+
+
+.toolbar {
+  display: none;
+  position: fixed;
+  bottom: 5px;
+  right: 15px;
+  color: #FFF;
+  text-align: center;
+  opacity:0;  /* make things invisible upon start */
+  animation:fadeIn ease-in 1;   /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  animation-fill-mode:forwards;   /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  animation-duration:1s;
+}
+
+.hexagon > span {
+  margin-left: -2px;
+  font-size: 30px;
+}
+.hexagon {
+  position: relative;
+  width: 60px;
+  height: 34.64px;
+  background:transparent;
+  margin: 17.32px 0;
+  border-left: solid 5px #ffffff;
+  border-right: solid 5px #ffffff;
+}
+
+.hexagon:hover{
+  cursor: pointer;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 42.43px;
+  height: 42.43px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 3.7868px;
+}
+
+.hexagon:before {
+  top: -21.2132px;
+  border-top: solid 7.0711px #ffffff;
+  border-right: solid 7.0711px #ffffff;
+}
+
+.hexagon:after {
+  bottom: -21.2132px;
+  border-bottom: solid 7.0711px #ffffff;
+  border-left: solid 7.0711px #ffffff;
+}

@@ -1,0 +1,57 @@
+.loginMain {
+  width: inherit;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.loginMain input {
+  background: transparent;
+  border: 0px;
+  border-bottom: 1px solid #EEE;
+  width: 60%;
+  height: 40px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.loginMain .box {
+  background-image: url('../images/background.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: blue;
+  height: inherit;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginMain .inner-box {
+  text-align: right;
+  padding-top:140px;
+  height: inherit;
+  width: inherit;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  justify-content: center;
+  align-items: center;
+}
+
+ .loginMain .form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.loginMain p > button {
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 0px;
+  text-align: center;
+  width: 200px!important;
+  height: 40px!important;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgb(56, 158, 30);
+  font-weight: bolder;
+  font-size: 20px;
+}

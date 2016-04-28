@@ -1,0 +1,70 @@
+{
+  "name": "misClient",
+  "version": "0.0.0",
+  "description": "A React/Flux app generate by RF, powered with JavaScript",
+  "main": "build/bundle.js",
+  "dependencies": {
+    "d3": "^3.5.16",
+    "flux": "*",
+    "jquery": "^2.2.0",
+    "keymirror": "^0.1.1",
+    "object-assign": "*",
+    "promise": "^7.1.1",
+    "radium": "^0.16.5",
+    "react": "^0.14.8",
+    "react-addons-css-transition-group": "^0.14.7",
+    "react-addons-shallow-compare": "^0.14.7",
+    "react-dom": "^0.14.8",
+    "react-dropdown": "^0.7.2",
+    "react-hexagon": "^1.0.1",
+    "react-router-component": "^0.29.2",
+    "react-selectize": "^0.8.1"
+  },
+  "devDependencies": {
+    "less-loader": "*",
+    "less": "*",
+    "exports-loader": "*",
+    "extract-text-webpack-plugin": "*",
+    "css-loader": "*",
+    "file-loader": "*",
+    "jest-cli": "*",
+    "react-hot-loader": "*",
+    "react-tools": "*",
+    "style-loader": "*",
+    "url-loader": "*",
+    "webpack-dev-server": "*",
+    "webpack": "*",
+    "jsx-loader": "*",
+    "bootstrap": "*",
+    "bootstrap-webpack": "*",
+    "imports-loader": "*",
+    "jquery": "*"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.prod.config.js",
+    "dev": "webpack-dev-server --config webpack.dev.config.js --colors --content-base ./build",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "",
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/preprocessor.js",
+    "testFileExtensions": [
+      "js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "globals": {
+      "SCRIPTS": "<rootDir>/src/scripts"
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/node_modules/"
+    ],
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react"
+    ]
+  }
+}
